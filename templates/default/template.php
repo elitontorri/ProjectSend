@@ -129,7 +129,7 @@ $count = count($my_files);
 												?>
 											</span>
 										</td>
-										<td class="description"><?php echo htmlentities($file['description']); ?></td>
+										<td class="description"><?php echo htmlspecialchars_decode($file['description']); ?></td>
 										<td><?php $this_file_size = get_real_size(UPLOADED_FILES_FOLDER.$file['url']); echo format_file_size($this_file_size); ?></td>
 										<td data-value="<?php echo strtotime($file['timestamp']); ?>">
 											<?php echo $date; ?>
